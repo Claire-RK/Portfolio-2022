@@ -1,0 +1,822 @@
+﻿:root {
+    --fontcolour: #F8F5F5;
+    --goldaccent: #52351B;
+    --purple:#553DAA;
+    --deeppurple:#510F54;
+}
+html{
+    font-size:62.5%;
+}
+
+@font-face{
+    src:url(fonts/Melodrama-Semibold.tff);
+    font-family: melodrama;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    background-color: #1D1529;
+    color: var(--fontcolour);
+}
+/*Nav*/
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 2.6rem 16rem;
+    margin-left:60rem;
+}
+.navBar{
+    list-style-type:none;
+    display:flex;
+}
+
+
+
+.navLink{
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-family:Melodrama;
+    font-weight:700;
+    color: var(--fontcolour);
+    text-decoration:none;
+}
+.navLink{
+    padding: 3.6rem;
+}
+
+.sidebar{
+    position:fixed;
+    left:-25rem;
+    width:25rem;
+    height:100%;
+    background:var(--purple) ;
+    transition: all .5s ease;
+}
+.sidebar ul a{
+    display:block;
+    height: 100%;
+    width:100%;
+    line-height: 6.5rem;
+    font-family: melodrama;
+    font-size:  3.2rem;
+    text-decoration: none;
+    color: var(--fontcolour);
+    padding-left: 6rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box; 
+    transition: .6s;      
+}
+.sidebar ul li:hover a{
+    font-size: 3.4rem;
+   
+}
+.sidebar ul a i{
+   
+    margin: right 1.6rem;
+}
+.sidebar ul li{
+   margin-top:3rem;
+}
+#check{
+    display:none;
+}
+label #menu,label #cancel{
+    position: absolute;
+    cursor: pointer;
+}
+label #menu{
+    left: 4rem;
+    top:2.5rem;
+    font: size 3.5rem;
+    color: var(--fontcolour) ;
+    transition: all .5s ;
+}
+label #cancel{
+    z-index: 1111;
+    left: -19.5rem;
+    top: 9rem;
+    transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+    left:0;
+}
+#check:checked ~ label #menu{
+    left:25rem;
+    opacity: 0%;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left:19.5rem;
+    
+}
+
+/*Media Query*/
+
+
+/*aboutPage*/
+.logo {
+    margin-top:22.3rem;
+    margin-right:51.2rem;
+    margin-left:50.6rem;
+    width: 25.8rem;
+    height: 27.2rem;
+}
+
+.star {
+    width: 2rem;
+    height: 2rem;
+   
+}
+
+h1 {
+    font-family: Melodrama;
+    font-size: 3.2rem;
+    color: var(--fontcolour);
+}
+.aboutHeading {
+    font-family: 'Melodrama';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 9.6rem;
+    line-height: 13rem;
+    display: flex;
+    align-items: center;
+    margin-left: 15rem;
+    margin-bottom:4rem;
+    margin-top:6rem;
+}
+.about img {
+    box-sizing: border-box;
+    width: 34.9rem;
+    height: 40.1rem;
+    border: 0.4rem solid var(--goldaccent);
+    border-radius: 16.8rem;
+    object-fit: cover;
+   
+}
+
+
+.about-text {
+    width: 55rem;
+    margin-bottom: 6rem;
+}
+.about-text h2{
+    margin-bottom:0.6rem;
+    
+}
+button {
+    background: none;
+    color: var(--fontcolour);
+    text-decoration: none;
+    border: 0.4rem solid var(--goldaccent);
+    border-radius: 12rem;
+    font-family: Melodrama;
+    font-size: 2.4rem;
+    font-weight:700;
+    padding: 0.6rem 4rem;
+    margin-top:4rem;
+    cursor: pointer;
+}
+button:hover{
+    color: var(--goldaccent);
+}
+
+.main{
+    width:113rem;
+    margin-top:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+
+
+h2 {
+    font-family: Melodrama;
+    color: var(--fontcolour);
+}
+h3 {
+    font-family: Melodrama;
+    color:var(--fontcolour);
+}
+/*footer*/
+
+
+.footer{
+    margin-top: 6.9rem;
+}
+.footerLine{
+    position: absolute;
+width: 134.9rem;
+height: 0px;
+border: 2px solid var(--fontcolour);
+margin: 0;
+}
+
+
+/*Menue*/
+.menuBttn {
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    margin-left: 7.2rem;
+}
+/*navbar responsive*/
+
+/*REsume*/
+.workExph1 h2{
+    font-size: 6.4rem;
+    text-align: center;
+    margin-left:49rem;
+    margin-bottom: 4rem;
+    
+}
+#logo{
+    float:left;
+    position:absolute;
+    margin: 2rem 10rem 0 0;
+}
+.workExph1 {
+    display: flex;
+    margin-left: 20rem;
+    margin-top: 14rem;
+}
+.timeline h3{
+    font-size: 4rem;
+}
+    
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 55rem;
+        height: 15rem;
+    }
+.timeLineArea {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-gap: 2.4rem;
+    margin-top: 16rem;
+}
+
+.line {
+    position: absolute;
+    height: 50rem;
+    border: 4px solid var(--purple);
+    margin-top:14.9rem;
+    
+}
+.dot{
+    position: absolute;
+width: 7.1rem;
+height: 7.1rem;
+border-radius: 50%;
+background: #987A51;
+margin-top: 10rem;
+margin-left: -3.5rem;
+}
+.dot2{
+    position: absolute;
+    width: 7.1rem;
+    height: 7.1rem;
+    border-radius: 50%;
+    background: #987A51;
+    margin-top: 34rem;
+    margin-left: -3.5rem;
+}
+.timeline {
+    margin-left: 5rem; 
+    margin-top: 10rem;  
+}
+.location{
+    margin-top: 8rem;
+}
+
+.line2{
+    margin-top: 40rem;
+width: 74rem;
+height: 0rem;
+border: 0.4rem solid var(--purple);
+}
+.education{
+    margin-top: 2.8rem;
+    font-size: 6.4rem;
+    padding-left:8.7rem;
+}
+.dates{
+    margin-top: 8rem;
+}
+.qualification{
+    margin-top: 3rem;
+    border-inline-start:0.4rem solid var(--purple);
+    border-block-start:1rem solid var(--purple);
+    padding-left:10rem;
+}
+.dateitems{
+    padding:2rem;
+}
+
+.Year{
+    font-size: 4.4rem;
+line-height: 8.6rem;
+}
+/*Work Page*/
+.flexbox-container{
+    display:grid;
+    grid-gap:2rem;
+}
+.flexbox-container h1{
+    margin-left:rem;
+}
+
+.flexbox-item {
+width: 77.8rem;
+height: 53.7rem;
+background: #510F54;
+margin-bottom: 20rem;
+border-radius: 27px;
+
+}
+
+.flexbox-time2{
+    width: 77.8rem;
+height: 53.7rem;
+background: #510F54;
+margin-bottom: 20rem;
+justify-content: right;
+border-radius: 37px;
+}
+
+
+.WBImg{
+    width: 45.4rem;
+height: 46.8rem;
+padding: left 3rem;
+margin-top: 7rem;
+
+}
+.WBImg2{
+    width: 27rem;
+    height: 43.2rem;
+    margin-bottom: 9rem;
+    padding:0;
+    margin-left:  4.7rem;
+}
+
+.CharacterImg{
+    width: 45.4rem;
+height: 45.4rem;
+margin-left: 14.3rem;
+margin-top: 4rem;
+}
+
+.WebPortfolio{
+    margin-top: 10rem;
+}
+.PhotographyImages{
+    padding:0;
+    margin-top: 1rem;
+}
+.Photography1{
+    Width: 41.8rem;
+height: 48.3rem;
+margin-top:1rem;
+margin-left:3rem;
+
+
+}
+.Photography2{
+    width: 27.9rem;
+height: 48.2rem;
+margin-left:  4rem;
+
+
+
+}
+
+/* MyJHB*/
+
+.MyJHB-h1{
+font-size: 6.4rem;
+text-align: center;
+margin-top: 24.4rem;
+padding:0;
+}
+
+.MyJHB-h2{
+    font-size: 6.4rem;
+    text-align: center;
+    
+    padding:0;
+
+}
+.Character{
+    display: flex;
+    margin-top: 14.2rem;
+}
+.CharacterH2{
+    font-size: 6.4rem;
+    font-weight: 300;
+    margin-top: 8.5rem;
+    padding-left: 13.1rem;
+}
+.CharacterImage{   
+width: 38.1rem;
+height: 38.1rem;
+margin-left: 13.1rem;
+
+}
+.circleContainer{
+    height: 100vh;
+    width: 100vh;
+    display: flex ;
+}
+.circle{
+    background:var(--fontcolour);
+    border: 1px solid #151515;
+    height: 9.5rem;
+    width: 45.3rem;
+    border-radius:  70%;
+    margin-top: 40rem;
+    margin-left: -40rem;
+}
+.CharacterText{
+    
+    margin-top: 10rem;
+    margin-right: 17rem;
+}
+.myJHB{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.myJHb-pic{  
+
+width: 46rem;
+height: 61.3rem;
+
+}
+
+
+.myJHb-text{
+    width: 55rem;
+    margin-left: 70rem;
+    margin-top: -50rem;
+    
+   
+}
+.myJHb-pic{
+    margin-top: 18rem;
+    margin-left: 14rem;
+ 
+}
+
+/*Website*/
+.Website-h1{
+    font-size: 6.4rem;
+    margin-top: 15rem;
+    margin-left: 2rem;
+    margin-bottom: 11rem;
+   
+}
+.website-heading{
+    font-size: 6.4rem;
+    margin-left:2rem;
+    padding:0;
+   
+}
+.website-item1{
+    width: 110.3rem;
+    height: 74.5rem;
+    background:var(--deeppurple);
+    margin-bottom: 20rem;
+    margin-top: 0rem;
+    
+}
+
+.UMI-images{
+    display: flex;
+    
+}
+.UMI-images1{
+    width: 51.1rem;
+height: 54.3rem;
+margin-top:  20rem;
+margin-left: 4rem;
+
+}
+.UMI-images2{
+    width: 51.1rem;
+height: 48rem;
+border-radius: 1.6rem;
+padding-left: 4.7rem;
+
+}
+.UMIparagraph{
+    margin-top:5.7rem;
+    margin-left:2rem;
+}
+.NB-images1{
+    width: 62.5rem;
+height: 60.7rem;
+margin-top: 13.9rem;
+margin-left: 6rem;
+}
+.NB-images2{
+width: 33rem;
+height: 65.3rem;
+margin-top: 0rem;
+margin-left: 7.7rem;
+
+}
+.website-heading2{
+    margin-top: 5rem;
+    font-size: 2rem;
+    margin-left:2rem;
+}
+.website-item2{
+    width: 110.3rem;
+    height: 74.5rem;
+    background:var(--deeppurple);
+    margin-bottom: 20rem;
+    
+}
+.website-heading2{
+    font-family: melodrama;
+ font-size:6.4rem;
+ margin-top: 9rem;
+
+ margin-top: 7rem;
+}
+.NWparagraph{
+    margin-top: 5.4rem;
+    margin-left:2rem;
+}
+/*photography*/
+.galleryH1{
+    font-family: melodrama;
+    font-weight: 300;
+    font-size: 6.4rem;
+    margin-top: 27rem;
+    margin-bottom: 4.7rem;
+}
+.galleryContents{
+    position: absolute;
+width: 121.3rem;
+height: 75.1rem;
+border: 5px solid var(--deeppurple);
+border-radius: 20px;
+margin:auto;
+}
+
+.Imge1{  
+    width: 26.2rem;
+    height: 30.4rem;
+    }
+    .Imge2{  
+    width: 41.5rem;
+    height: 30.8rem;
+    }
+    .imge3{
+    width: 40.3rem;
+    height: 304rem;
+    
+    }
+    .imge4{
+        width: 39.1rem;
+        height: 26.1rem;
+        
+    }
+    .imge5{
+    width: 38.9rem;
+    height: 26.1rem;
+    
+    }
+    .Imge6{
+        width: 23.8rem;
+        height: 26.1rem;
+        
+    }
+.galleryImages{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.6rem;
+}
+.Imge{
+    padding:2rem 2rem 2rem;
+}
+
+
+
+
+/*Contact*/
+.image2{
+    box-sizing: border-box;
+    width: 34.9rem;
+    height: 40.1rem;
+    border: 0.4rem solid var(--goldaccent);
+    border-radius: 16.8rem;
+    object-fit: cover;
+    width: 34.9rem;
+    height: 40.1rem;
+    border: 0.4rem solid var(--goldaccent);
+    border-radius: 16.8rem;
+    object-fit: cover;
+
+    margin-top: 20rem;
+    margin-left:  20rem;
+}
+.contactContainer{
+    display:flex;
+}
+.followheading{
+    font-size: 5rem;
+    padding-bottom: 2rem;
+    margin-left:1rem;
+}
+.icons{
+    margin-top:  30rem;  
+    margin-left:19rem;
+    
+}
+.socials{
+    width: 103px;
+height: 98px;
+padding-left:1rem;
+
+}
+
+/*Media Queries*/
+
+@media screen and(min-width:55rem) and (max-width:77rem)  {
+    .aboutHeading{
+        font-size: 4rem;
+    }
+    .image{
+        width: 16.4rem;
+    height: 15rem;
+
+    }
+    .logo{
+        width: 180px;
+height: 189px;
+margin-top:20rem;
+margin-left:  40rem;
+    }
+    .about{
+        width:100%
+    }
+    .about-text{
+        font-size: 1.4rem;
+        width: 280px;
+height: 296px;
+margin-left:-40rem;
+
+    }
+    .aboutHeading{
+        font-size: 4rem;
+    }
+
+/*REsume*/
+.experience h3{
+    font-size:2rem;
+}
+
+.workExph1 h2{
+    font-size: 3.2rem;
+}
+.education{
+    font-size:3.rem
+}
+
+
+    /*Website*/
+    .Website-h1{
+        font-size: 3.6rem;
+    }
+.UMIparagraph{
+    width: 430px;
+    height: 50px;
+    padding:2rem;
+}
+    
+    .website-item2{
+        width: 663px;
+height: 407px;
+
+    }
+    .NB-images1{
+        width: 171.29px;
+height: 166.28px;
+    }
+    .NB-images2{
+        width: 90.15px;
+height: 178.8px;
+
+    }
+
+
+
+
+    /*work*/
+    .flexbox-item{
+        width: 1.5rem;
+height: 29.6rem;
+    }
+    .flexbox-container{
+        margin-left: 2rem;
+    }
+
+
+    /*myJHB*/
+    .myJHb-text{
+        width: 328px;
+    height: 132px;
+}
+
+@media screen and (max-width:50rem) {
+    .navLink{
+        display:none;
+    }
+
+    /*about*/
+    .logo{
+        width: 180px;
+height: 189px;
+margin-top:20rem;
+margin-left:  40rem;
+    }
+    .about{
+        width:100%
+    }
+    .about-text{
+        font-size: 1.4rem;
+        width: 189px;
+height: 139px;
+margin-left:-40rem;
+
+    }
+    .aboutHeading{
+        font-size: 4rem;
+    }
+    .about button{
+        font-size: 1.6rem;
+    }
+    .about img{
+        width: 164px;
+height: 150px;
+    }
+
+    /*REsume*/
+.experience h3{
+    font-size:2rem;
+}
+
+.workExph1 h2{
+    font-size: 3.2rem;
+    margin-bottom:14rem;
+    margin-left:25rem;
+}
+.circleContainer{
+    height: 2rem;
+    width: 40vh
+}
+#logo{
+    width: 270px;
+height: 286px;
+}
+.location{
+    width: 231px;
+height: 167px;
+}
+.line{
+    height: 58rem;
+}
+ 
+ .education{
+    font-size:3.rem
+ }
+
+ /*MyJHB*/
+ .myJHb-text{
+    width: 328px;
+height: 132px;
+
+
+ }
+}
+
+
